@@ -1,0 +1,840 @@
+
+---
+const projects = [
+  {
+    number: "01",
+    title: "Homelab Infrastructure",
+    category: "INFRASTRUCTURE / LINUX",
+    description:
+      "A self-hosted environment built around virtualization, Docker, networking, monitoring, and reliable services.",
+    tags: ["Proxmox", "Docker", "Linux"],
+  },
+  {
+    number: "02",
+    title: "Remy",
+    category: "LOCAL AI / AUTOMATION",
+    description:
+      "A locally hosted AI assistant designed to connect language models with practical infrastructure tools.",
+    tags: ["Python", "Ollama", "Automation"],
+  },
+  {
+    number: "03",
+    title: "Systems & Security",
+    category: "NETWORKING / SECURITY",
+    description:
+      "Hands-on experiments in network isolation, system administration, service monitoring, and defensive security.",
+    tags: ["Networking", "Monitoring", "Security"],
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Haywood Computing — practical infrastructure, Linux, automation, and technology projects."
+    />
+    <meta name="theme-color" content="#0b1220" />
+    <title>Haywood Computing | Systems Built With Purpose</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Haywood Computing home">
+        <img
+        class="brand-mark"
+        src="/haywood-computing-logo.svg"
+        alt=""
+        aria-hidden="true"
+        />
+        <span class="brand-name">HAYWOOD<span>COMPUTING</span></span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Get in touch <span>↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <p class="eyebrow"><span class="status-dot"></span> INDEPENDENT TECHNOLOGY PROJECTS</p>
+
+          <h1>
+            Building systems.<br />
+            <span>Solving problems.</span>
+          </h1>
+
+          <p class="hero-description">
+            Exploring the intersection of infrastructure, automation, and
+            security through hands-on projects and practical engineering.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              Explore projects <span>↘</span>
+            </a>
+            <a class="button button-secondary" href="#about">About Haywood Computing</a>
+          </div>
+
+          <div class="hero-meta">
+            <span><span class="meta-line"></span> Linux & Infrastructure</span>
+            <span><span class="meta-line"></span> Automation & AI</span>
+            <span><span class="meta-line"></span> Security Labs</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Abstract network illustration">
+          <div class="visual-label">HC / SYSTEMS OVERVIEW</div>
+          <div class="network">
+            <div class="network-ring ring-one"></div>
+            <div class="network-ring ring-two"></div>
+            <div class="network-ring ring-three"></div>
+
+            <svg class="circuit-lines" viewBox="0 0 420 420" fill="none" aria-hidden="true">
+              <path d="M210 210 L210 92 L130 92 L130 58" />
+              <path d="M210 210 L325 210 L325 140 L365 140" />
+              <path d="M210 210 L115 210 L115 285 L60 285" />
+              <path d="M210 210 L260 260 L260 335 L315 335" />
+              <path d="M210 210 L210 315 L170 355" />
+              <circle cx="130" cy="58" r="4" />
+              <circle cx="365" cy="140" r="4" />
+              <circle cx="60" cy="285" r="4" />
+              <circle cx="315" cy="335" r="4" />
+              <circle cx="170" cy="355" r="4" />
+            </svg>
+
+            <div class="core">
+              <span>H<span class="core-c">C</span></span>
+              <small>HAYWOOD COMPUTING</small>
+            </div>
+
+            <div class="node node-top"><span>01</span> INFRA</div>
+            <div class="node node-right"><span>02</span> AUTOMATION</div>
+            <div class="node node-left"><span>03</span> SECURITY</div>
+            <div class="node node-bottom"><span>04</span> SYSTEMS</div>
+          </div>
+          <div class="visual-footer">
+            <span>BUILD / TEST / IMPROVE</span>
+            <span class="visual-indicator">● OPERATIONAL MINDSET</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SELECTED WORK</p>
+            <h2>Projects in progress<span>.</span></h2>
+          </div>
+          <p class="section-intro">
+            Real systems, practical experiments, and lessons learned along the way.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          {projects.map((project) => (
+            <article class="project-card">
+              <div class="project-top">
+                <span class="project-number">{project.number}</span>
+                <span class="project-arrow">↗</span>
+              </div>
+              <p class="project-category">{project.category}</p>
+              <h3>{project.title}</h3>
+              <p class="project-description">{project.description}</p>
+              <div class="tags">
+                {project.tags.map((tag) => <span>{tag}</span>)}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div>
+          <p class="eyebrow">THE APPROACH</p>
+          <h2>Learn by building.<br /><span>Improve by testing.</span></h2>
+        </div>
+        <div class="about-copy">
+          <p>
+            Haywood Computing is a space for building, documenting, and
+            improving technology systems. The focus is on understanding how
+            things work, solving real problems, and turning experimentation
+            into useful knowledge.
+          </p>
+          <p>
+            From Linux administration and self-hosted infrastructure to local
+            AI and automation, each project is an opportunity to learn
+            something useful and build something better.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <p class="eyebrow">HAVE A PROJECT IN MIND?</p>
+        <h2>Let's connect<span>.</span></h2>
+        <p>
+          Interested in the projects, the technology, or what comes next?
+          Get in touch.
+        </p>
+        <!-- Replace this placeholder with your real contact email. -->
+        <a class="button button-primary" href="mailto:YOUR_EMAIL@example.com">
+          Contact Haywood Computing <span>↗</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#home">HC <span> / HAYWOOD COMPUTING</span></a>
+      <p>Built with curiosity. Improved through experience.</p>
+      <a href="#home">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :root {
+    color-scheme: dark;
+    --background: #0b1220;
+    --surface: #101b2d;
+    --surface-hover: #14233a;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --blue: #3b82f6;
+    --cyan: #38bdf8;
+    --border: rgba(148, 163, 184, 0.16);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+  }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(ellipse at 80% 10%, rgba(30, 64, 175, 0.12), transparent 35%),
+      var(--background);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    line-height: 1.6;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .site-header,
+  .site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px max(6%, calc((100% - 1200px) / 2));
+  }
+
+  .site-header {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .brand-mark span {
+    color: var(--cyan);
+  }
+
+  .brand-name {
+    display: grid;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+  }
+
+  .brand-name span {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2.4px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  nav a,
+  .site-footer a {
+    transition: color 180ms ease;
+  }
+
+  nav a:hover,
+  .site-footer a:hover {
+    color: var(--cyan);
+  }
+
+  .nav-contact {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    min-height: 650px;
+    margin: auto;
+    padding: 70px 28px 85px;
+  }
+
+  .eyebrow {
+    margin: 0 0 18px;
+    color: var(--cyan);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  .status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: var(--cyan);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.55);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 1.13;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(42px, 5.3vw, 68px);
+    letter-spacing: -3px;
+  }
+
+  h1 span,
+  .about h2 span {
+    color: var(--blue);
+  }
+
+  .hero-description {
+    max-width: 530px;
+    margin: 24px 0 30px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 46px;
+    padding: 12px 17px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: transform 180ms ease, background 180ms ease;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+  }
+
+  .button-primary {
+    background: var(--blue);
+    color: white;
+  }
+
+  .button-primary:hover {
+    background: #2563eb;
+  }
+
+  .button-secondary {
+    border-color: var(--border);
+    color: var(--text);
+  }
+
+  .button-secondary:hover {
+    background: var(--surface);
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 42px;
+    color: var(--muted);
+    font-size: 10px;
+  }
+
+  .meta-line {
+    display: inline-block;
+    width: 13px;
+    height: 2px;
+    margin: 0 6px 3px 0;
+    background: var(--cyan);
+  }
+
+  .hero-visual {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(16, 27, 45, 0.92), rgba(11, 18, 32, 0.7));
+  }
+
+  .visual-label,
+  .visual-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    color: var(--muted);
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .network {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 1;
+    margin: auto;
+    overflow: hidden;
+    background-image: radial-gradient(rgba(56, 189, 248, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .network-ring {
+    position: absolute;
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: 50%;
+  }
+
+  .ring-one { width: 82%; aspect-ratio: 1; }
+  .ring-two { width: 62%; aspect-ratio: 1; }
+  .ring-three { width: 42%; aspect-ratio: 1; }
+
+  .circuit-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .circuit-lines path {
+    stroke: var(--cyan);
+    stroke-width: 1.4;
+    opacity: 0.7;
+  }
+
+  .circuit-lines circle {
+    fill: var(--cyan);
+  }
+
+  .core {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 36%;
+    aspect-ratio: 1;
+    border: 1px solid rgba(56, 189, 248, 0.6);
+    border-radius: 12px;
+    background: #0b1220;
+    box-shadow: 0 0 50px rgba(37, 99, 235, 0.16);
+  }
+
+  .core > span {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(34px, 4vw, 56px);
+    font-weight: 700;
+    letter-spacing: -5px;
+    color: #1d4ed8;
+  }
+
+  .core-c {
+    color: var(--cyan);
+  }
+
+  .core small {
+    color: var(--muted);
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+  .node {
+    position: absolute;
+    padding: 6px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--background);
+    color: var(--muted);
+    font-family: monospace;
+    font-size: 8px;
+    letter-spacing: 0.4px;
+  }
+
+  .node span {
+    margin-right: 4px;
+    color: var(--cyan);
+  }
+
+  .node-top { top: 12%; left: 17%; }
+  .node-right { top: 32%; right: 1%; }
+  .node-left { bottom: 29%; left: 0; }
+  .node-bottom { right: 14%; bottom: 10%; }
+
+  .visual-indicator {
+    color: var(--cyan);
+  }
+
+  .section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 28px;
+  }
+
+  .projects {
+    border-top: 1px solid var(--border);
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 35px;
+  }
+
+  .section-heading .eyebrow,
+  .about .eyebrow {
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(30px, 4vw, 43px);
+    letter-spacing: -1.8px;
+  }
+
+  h2 > span {
+    color: var(--cyan);
+  }
+
+  .section-intro {
+    max-width: 350px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 275px;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: rgba(16, 27, 45, 0.58);
+    transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(56, 189, 248, 0.4);
+    background: var(--surface-hover);
+  }
+
+  .project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .project-number,
+  .project-category {
+    color: var(--cyan);
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .project-arrow {
+    color: var(--muted);
+  }
+
+  .project-category {
+    margin: 30px 0 9px;
+    font-size: 9px;
+  }
+
+  h3 {
+    margin: 0 0 12px;
+    font-size: 21px;
+    letter-spacing: -0.6px;
+  }
+
+  .project-description {
+    flex: 1;
+    margin: 0 0 22px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tags span {
+    padding: 5px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: #cbd5e1;
+    font-size: 9px;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    border-top: 1px solid var(--border);
+  }
+
+  .about-copy {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .about-copy p:first-child {
+    margin-top: 0;
+  }
+
+  .contact {
+    margin-bottom: 40px;
+    padding: 65px 28px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: radial-gradient(ellipse at 50% 100%, rgba(37, 99, 235, 0.13), transparent 65%);
+    text-align: center;
+  }
+
+  .contact h2 {
+    margin-bottom: 15px;
+  }
+
+  .contact > p:not(.eyebrow) {
+    margin: 0 auto 25px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 10px;
+  }
+
+  .footer-brand {
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  .footer-brand span {
+    color: var(--muted);
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  @media (min-width: 1300px) {
+    .hero {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .hero {
+      grid-template-columns: 1fr;
+      min-height: unset;
+      padding-top: 65px;
+    }
+
+    .hero-visual {
+      max-width: 560px;
+      width: 100%;
+      margin: 10px auto 0;
+    }
+
+    .project-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .about {
+      gap: 30px;
+    }
+
+    .hero-meta {
+      margin-top: 28px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .site-header {
+      align-items: flex-start;
+      padding: 18px 20px;
+    }
+
+    nav {
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 11px;
+    }
+
+    .nav-contact {
+      padding: 6px 8px;
+    }
+
+    .brand-name {
+      font-size: 10px;
+    }
+
+    .brand-name span {
+      font-size: 8px;
+    }
+
+    .hero {
+      padding: 55px 20px 65px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 11vw, 56px);
+      letter-spacing: -2.5px;
+    }
+
+    .hero-description {
+      font-size: 13px;
+    }
+
+    .hero-meta {
+      gap: 12px;
+      font-size: 9px;
+    }
+
+    .hero-visual {
+      padding: 12px;
+    }
+
+    .node {
+      font-size: 7px;
+      padding: 5px;
+    }
+
+    .section {
+      padding: 65px 20px;
+    }
+
+    .section-heading {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .project-grid,
+    .about {
+      grid-template-columns: 1fr;
+    }
+
+    .project-card {
+      min-height: 245px;
+    }
+
+    .about {
+      gap: 20px;
+    }
+
+    .contact {
+      width: calc(100% - 32px);
+      padding: 48px 18px;
+    }
+
+    .site-footer {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 8px;
+      padding: 24px 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
